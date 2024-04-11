@@ -14,7 +14,7 @@ The naming convention for the files in the `data` directory is demonstrated in t
 When the script is executed with the following command in the Terminal application from the root of the assignment repository
 
 ```bash
-julia --project=. -e 'using Distributed; addprocs(3, exeflags="--project"); using assignment16; compute_toughness_parallel("./data/data") |> print'
+$HOME/.juliaup/bin/julia --project=. -e 'using Distributed; addprocs(3, exeflags="--project"); using assignment16; compute_toughness_parallel("./data/data") |> print'
 ```
 
 it run on `3` processors and will print the toughness value to the screen. Your code should be parallel consistent, i.e. it should produce the exact same answer independent of the number of processors you specify.
