@@ -1,7 +1,7 @@
 # Homework Assignment 16
 
 
-![Assignment 16](https://github.com/PGE383-HPC/assignment16-solution/actions/workflows/main.yml/badge.svg)
+![Assignment 16](https://github.com/PGE383-HPC/assignment16/actions/workflows/main.yml/badge.svg)
 
 Sometimes in parallel computations we need to load data from a disk that is too large to fit into the RAM of a single processor.  When this occurs, we need to do some type of parallel input/output, i.e. we need to load individual partitions of the data onto each processor in the parallel network.  The `Distributed` and `DistributedArrays.jl` packages offer a way to do this.  
 
