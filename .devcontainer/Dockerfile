@@ -8,8 +8,8 @@ USER vscode
 
 # Install Julia and Julia kernel
 RUN curl -fsSL https://install.julialang.org | sh -s -- -y; \
-    /home/vscode/.juliaup/bin/juliaup add 1.10; \
-    /home/vscode/.juliaup/bin/juliaup default 1.10
+    /home/vscode/.juliaup/bin/juliaup add 1.9; \
+    /home/vscode/.juliaup/bin/juliaup default 1.9
 RUN /home/vscode/.juliaup/bin/julia -e "using Pkg; Pkg.add(\"IJulia\"); Pkg.add(\"LanguageServer\"); Pkg.add(\"Revise\"); Pkg.activate(\".\"); Pkg.instantiate(); using MPI; MPI.install_mpiexecjl()"; \ 
     mkdir -p $HOME/.julia/config && echo "using Revise;" >> $HOME/.julia/config/startup.jl
 
